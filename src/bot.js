@@ -9,6 +9,8 @@ const Main = function () {
         let botInstance = Util.CreateBot(Mineflayer, Config.server.serverHost, Config.server.serverPort, bot.username, bot.password);
         botInstances.push(botInstance);
     }
+
+    return botInstances;
 }
 
 export default {

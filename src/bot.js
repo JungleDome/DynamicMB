@@ -2,9 +2,9 @@ import Mineflayer from 'mineflayer';
 import Util from './utilities/util.js';
 import Config from './utilities/config.js';
 
-const Main = function () {
-    var botInstances = [];
+let botInstances = [];
 
+const Main = function () {
     for (let bot in Config.bots) {
         let botInstance = Util.CreateBot(Mineflayer, Config.server.serverHost, Config.server.serverPort, bot.username, bot.password);
         botInstances.push(botInstance);
@@ -15,4 +15,5 @@ const Main = function () {
 
 export default {
     Main: Main,
+    _instances: botInstances,
 }

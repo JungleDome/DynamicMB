@@ -3,4 +3,4 @@ import Bot from './bot.js';
 
 
 WebServer.Main(3000);
-Bot.Main();
+Bot.CreateBot();

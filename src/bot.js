@@ -4,7 +4,7 @@ import Config from './utilities/config.js';
 
 let botInstances = [];
 
-const Main = function () {
+const CreateBot = function () {
     for (let bot in Config.bots) {
         let botInstance = Util.CreateBot(Mineflayer, Config.server.serverHost, Config.server.serverPort, bot.username, bot.password);
         botInstances.push(botInstance);
@@ -14,6 +14,6 @@ const Main = function () {
 }
 
 export default {
-    Main: Main,
+    CreateBot: CreateBot,
     _instances: botInstances,
 }
